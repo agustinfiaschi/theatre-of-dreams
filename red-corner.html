@@ -6,7 +6,7 @@
     <title>The Red Corner | Actualidad del Manchester United</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-900 text-zinc-100 font-sans min-h-screen flex flex-col justify-between">
+<body class="bg-zinc-900 text-zinc-100 font-sans min-h-screen flex flex-col justify-between overflow-x-hidden">
 
     <header class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -20,26 +20,35 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-10 w-full flex-grow">
+    <section class="relative bg-zinc-950 border-b border-zinc-800 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('oldtrafford.jpg')] bg-cover bg-center opacity-40 group-hover:scale-105 transition duration-1000"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
         
-        <div class="flex items-center justify-between mb-8 border-b border-zinc-800 pb-4">
-            <div class="flex items-center gap-3">
-                <span class="w-1.5 h-6 bg-red-600 rounded-full"></span>
-                <h3 class="text-lg md:text-xl font-black uppercase tracking-wider">The Red Corner Blog</h3>
+        <div class="relative max-w-6xl mx-auto px-4 py-20 w-full flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-2/5 text-left">
+                <span class="text-red-500 font-bold tracking-widest text-xs uppercase bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">Columnas & Opinión</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-4 tracking-tight leading-none text-zinc-50 hover:scale-101 transition duration-300">
+                    The <span class="text-red-600">Red</span> Corner
+                </h2>
+                <p class="mt-4 text-zinc-300 text-sm md:text-base max-w-lg leading-relaxed">
+                    Análisis tácticos, opiniones calientes y toda la actualidad de los Diablos Rojos de la mano de la comunidad de Old Trafford Arg.
+                </p>
             </div>
-            <span class="text-zinc-500 text-xs font-medium hidden sm:inline">Actualizado en tiempo real</span>
-        </div>
 
-        <div id="contenedor-noticias" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="col-span-full text-center py-12 text-zinc-500 text-sm animate-pulse">
-                🔄 Sincronizando el feed deportivo...
+            <div id="contenedor-noticias" class="w-full md:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+                <div id="noticias-cargando" class="col-span-full text-center py-10 text-zinc-500 text-sm animate-pulse">
+                    <span class="block text-xl mb-2">🔄</span> Sincronizando el feed de Manchester...
+                </div>
             </div>
         </div>
+    </section>
+
+    <main class="w-full flex-grow pb-12">
     </main>
 
-    <footer class="bg-zinc-950 border-t border-zinc-900 py-6">
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-8">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
-            <p>© 2026 Old Trafford Arg. Diseñando el rincón del hincha.</p>
+            <p>© 2026 Old Trafford Arg. Diseñando el pub del futuro.</p>
             <div class="flex gap-6">
                 <a href="index.html" class="hover:text-zinc-300 transition">Volver al Inicio</a>
                 <a href="pub.html" class="hover:text-zinc-300 transition">The Pub</a>
