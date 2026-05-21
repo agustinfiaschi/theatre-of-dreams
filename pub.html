@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pub | Diseñemos el Bar Definitivo de la Premier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-zinc-100 font-sans min-h-screen flex flex-col justify-between">
+
+    <header class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-wider text-red-600">OLD<span class="text-zinc-100">TRAFFORD</span></h1>
+            <nav class="space-x-6 hidden md:flex font-medium text-sm">
+                <a href="index.html" class="hover:text-red-500 transition">Inicio</a>
+                <a href="#" class="hover:text-red-500 transition">The Red Corner</a>
+                <a href="pub.html" class="text-red-500 hover:text-red-400 transition">The Pub</a>
+                <a href="#" class="hover:text-red-500 transition">Fixture</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-12 w-full">
+        <div class="text-center mb-10">
+            <span class="text-red-500 font-bold tracking-widest text-xs uppercase bg-red-500/10 px-3 py-1 rounded-full">Proyecto Comunidad</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold mt-3 tracking-tight">El Pub de la <span class="text-red-600">Premier</span></h2>
+            <p class="mt-4 text-zinc-400 text-sm md:text-base">
+                Queremos armar un bar temático real en Argentina. Ayudanos a diseñarlo votando tus preferencias y dejando tus ideas.
+            </p>
+        </div>
+
+        <form class="bg-zinc-950 border border-zinc-800 rounded-xl p-6 md:p-8 shadow-2xl space-y-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Tu Nombre</label>
+                    <input type="text" placeholder="Ej: Agustín" class="w-full bg-zinc-900 border border-zinc-800 rounded p-3 text-sm focus:outline-none focus:border-red-600 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Tu Email</label>
+                    <input type="email" placeholder="nombre@correo.com" class="w-full bg-zinc-900 border border-zinc-800 rounded p-3 text-sm focus:outline-none focus:border-red-600 transition">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">¿De qué zona de Argentina sos?</label>
+                <input type="text" placeholder="Ej: Escobar, Buenos Aires" class="w-full bg-zinc-900 border border-zinc-800 rounded p-3 text-sm focus:outline-none focus:border-red-600 transition">
+            </div>
+
+            <hr class="border-zinc-900 my-6">
+
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3">1. ¿Qué estilo de decoración preferís para el bar?</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <label class="bg-zinc-900 border border-zinc-800 p-4 rounded-lg flex items-center gap-3 cursor-pointer hover:border-zinc-700 transition">
+                        <input type="radio" name="decoracion" value="clasico" class="accent-red-600">
+                        <span class="text-sm">Pub Inglés Clásico (Madera oscura, cuadros antiguos)</span>
+                    </label>
+                    <label class="bg-zinc-900 border border-zinc-800 p-4 rounded-lg flex items-center gap-3 cursor-pointer hover:border-zinc-700 transition">
+                        <input type="radio" name="decoracion" value="moderno" class="accent-red-600">
+                        <span class="text-sm">Sport Bar Moderno (Neones, metal, estilo industrial)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3">2. Para ver los partidos, ¿qué priorizás?</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <label class="bg-zinc-900 border border-zinc-800 p-4 rounded-lg flex items-center gap-3 cursor-pointer hover:border-zinc-700 transition">
+                        <input type="radio" name="pantallas" value="gigante" class="accent-red-600">
+                        <span class="text-sm">Una pantalla gigante tipo cine (Foco en el partido principal)</span>
+                    </label>
+                    <label class="bg-zinc-900 border border-zinc-800 p-4 rounded-lg flex items-center gap-3 cursor-pointer hover:border-zinc-700 transition">
+                        <input type="radio" name="pantallas" value="muchas" class="accent-red-600">
+                        <span class="text-sm">Muchas pantallas chicas (Para pasar varias ligas a la vez)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">¿Qué cerveza, comida o detalle sentís que no puede faltar?</label>
+                <textarea rows="3" placeholder="Tus sugerencias..." class="w-full bg-zinc-900 border border-zinc-800 rounded p-3 text-sm focus:outline-none focus:border-red-600 transition resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded transition text-sm uppercase tracking-wider">
+                Enviar mis propuestas
+            </button>
+
+        </form>
+    </main>
+
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-6 text-center text-xs text-zinc-600 w-full">
+        <p>© 2026 Old Trafford Arg. Diseñando el pub del futuro.</p>
+    </footer>
+
+</body>
+</html>
