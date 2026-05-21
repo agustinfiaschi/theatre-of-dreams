@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Theater of Dreams | Comunidad de Fútbol & Pub</title>
-    <!-- Traemos Tailwind CSS desde su CDN para no renegar instalando nada pesado por ahora -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-900 text-zinc-100 font-sans">
+<body class="bg-zinc-900 text-zinc-100 font-sans min-h-screen flex flex-col justify-between">
 
-    <!-- CABECERA / NAV -->
     <header class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo con el rojo característico del United pero de estética lisa y moderna -->
             <h1 class="text-2xl font-black tracking-wider text-red-600">OLD<span class="text-zinc-100">TRAFFORD</span></h1>
             <nav class="space-x-6 hidden md:flex font-medium text-sm">
                 <a href="index.html" class="hover:text-red-500 transition">Inicio</a>
@@ -23,144 +20,118 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (BIENVENIDA) -->
-    <section class="relative bg-zinc-950 py-20 px-4 text-center border-b border-zinc-800">
-        <div class="max-w-3xl mx-auto">
-            <span class="text-red-500 font-bold tracking-widest text-xs uppercase bg-red-500/10 px-3 py-1 rounded-full">De Argentina a Old Trafford</span>
-            <h2 class="text-4xl md:text-6xl font-extrabold mt-4 tracking-tight leading-tight">
-                Pasión por la Premier, <br>esencia de <span class="text-red-600">Manchester</span>.
-            </h2>
-            <p class="mt-6 text-zinc-400 text-lg max-w-xl mx-auto">
-                Un espacio para debatir la táctica, seguir a los nuestros y empezar a diseñar el pub futbolero definitivo.
-            </p>
-            <div class="mt-8 flex justify-center gap-4">
-                <button class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded transition text-sm">
-                    Unirse a la Comunidad
-                </button>
-                <button class="border border-zinc-700 hover:border-zinc-500 text-zinc-300 font-bold px-6 py-3 rounded transition text-sm">
-                    Ver Próximo Partido
-                </button>
-            </div>
-        </div>
-    </section>
-        <section class="max-w-4xl mx-auto px-4 -mt-10 relative z-10">
-        <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-6 shadow-2xl backdrop-blur-sm">
-            
-            <div class="flex justify-between items-center border-b border-zinc-800 pb-4 mb-6">
-                <span class="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span> Próxima Fecha | Premier League
-                </span>
-                <span id="match-date" class="text-xs font-medium text-zinc-500 bg-zinc-900 px-3 py-1 rounded-md border border-zinc-800">
-                    Cargando fecha...
-                </span>
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
-                
-                <div class="flex items-center gap-4 w-full md:w-2/5 justify-start md:justify-end">
-                    <span id="home-name" class="text-xl font-bold tracking-tight text-right order-2 md:order-1">Cargando...</span>
-                    <img id="home-logo" src="" alt="Logo Local" class="w-12 h-12 object-contain order-1 md:order-2 hidden">
-                </div>
-
-                <div class="text-center w-full md:w-1/5 py-2 md:py-0">
-                    <span class="text-xs font-black uppercase tracking-widest text-zinc-600 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-lg">VS</span>
-                </div>
-
-                <div class="flex items-center gap-4 w-full md:w-2/5 justify-start">
-                    <img id="away-logo" src="" alt="Logo Visitante" class="w-12 h-12 object-contain hidden">
-                    <span id="away-name" class="text-xl font-bold tracking-tight">Cargando...</span>
-                </div>
-
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-zinc-900 flex flex-wrap justify-between text-xs text-zinc-500 gap-2">
-                <div>Estadio: <span id="match-venue" class="text-zinc-400 font-medium">Old Trafford</span></div>
-                <div>Transmisión: <span class="text-zinc-400 font-medium">ESPN / Disney+</span></div>
-            </div>
-
-        </div>
-    </section>
-
-    <script src="app.js"></script>
-    <section class="max-w-6xl mx-auto px-4 mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <main class="w-full flex-grow pb-12">
         
-        <div class="md:col-span-2 relative bg-zinc-950 border border-zinc-800 rounded-xl overflow-hidden h-64 flex items-center p-6 md:p-8 shadow-xl group">
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1569427382226-c2ba68731174?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-20 group-hover:scale-105 transition duration-700"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
-
-            <div class="relative z-10 max-w-md">
-                <span class="text-[9px] font-black uppercase tracking-widest bg-red-600/10 text-red-500 border border-red-500/20 px-2 py-0.5 rounded">
-                    Columnas & Actualidad
-                </span>
-                <h4 class="text-xl md:text-2xl font-black text-zinc-100 tracking-tight mt-3 leading-tight">
-                    El rincón de debate para el hincha argentino
-                </h4>
-                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
-                    Leé nuestros análisis tácticos y seguí las últimas noticias traídas directamente desde Manchester traducidas en vivo.
+        <section class="relative bg-zinc-950 py-20 px-4 text-center border-b border-zinc-800">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-red-500 font-bold tracking-widest text-xs uppercase bg-red-500/10 px-3 py-1 rounded-full">De Argentina a Old Trafford</span>
+                <h2 class="text-4xl md:text-6xl font-extrabold mt-4 tracking-tight leading-tight">
+                    Pasión por la Premier, <br>esencia de <span class="text-red-600">Manchester</span>.
+                </h2>
+                <p class="mt-6 text-zinc-400 text-lg max-w-xl mx-auto">
+                    Un espacio para debatir la táctica, seguir a los nuestros y empezar a diseñar el pub futbolero definitivo.
                 </p>
-                <a href="red-corner.html" class="inline-flex items-center gap-2 mt-4 bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-lg text-[11px] transition uppercase tracking-wider shadow-lg">
-                    Entrar a leer noticias →
-                </a>
+                <div class="mt-8 flex justify-center gap-4">
+                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded transition text-sm">
+                        Unirse a la Comunidad
+                    </button>
+                    <button class="border border-zinc-700 hover:border-zinc-500 text-zinc-300 font-bold px-6 py-3 rounded transition text-sm">
+                        Ver Próximo Partido
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="bg-gradient-to-br from-zinc-950 to-zinc-900 border border-zinc-800 rounded-xl p-6 relative overflow-hidden flex flex-col justify-between">
-            <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-red-600/5 rounded-full blur-2xl"></div>
-            
-            <div>
-                <h4 class="text-base font-bold text-red-500">Hacia el Pub Definitivo 🍻</h4>
-                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
-                    Nuestro sueño es abrir un bar temático en Argentina para vivir la Premier. Sumate a la comunidad mientras armamos el proyecto.
-                </p>
-            </div>
-            
-            <div class="mt-4 space-y-2">
-                <a href="#" target="_blank" class="bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg flex justify-between items-center text-[11px] transition group">
-                    <span class="text-zinc-400">Juntadas Virtuales:</span>
-                    <span class="text-zinc-200 font-bold group-hover:text-red-500 transition flex items-center gap-1">Por Discord 🎧</span>
-                </a>
+        <section class="max-w-4xl mx-auto px-4 -mt-10 relative z-10">
+            <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-6 shadow-2xl backdrop-blur-sm">
                 
-                <a href="pub.html" class="block w-full text-center bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold py-2 rounded-lg text-[11px] transition border border-zinc-700">
-                    Proponer ideas para el Bar
-                </a>
+                <div class="flex justify-between items-center border-b border-zinc-800 pb-4 mb-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span> Próxima Fecha | Premier League
+                    </span>
+                    <span id="match-date" class="text-xs font-medium text-zinc-500 bg-zinc-900 px-3 py-1 rounded-md border border-zinc-800">
+                        Cargando fecha...
+                    </span>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+                    
+                    <div class="flex items-center gap-4 w-full md:w-2/5 justify-start md:justify-end">
+                        <span id="home-name" class="text-xl font-bold tracking-tight text-right order-2 md:order-1">Cargando...</span>
+                        <img id="home-logo" src="" alt="Logo Local" class="w-12 h-12 object-contain order-1 md:order-2 hidden">
+                    </div>
+
+                    <div class="text-center w-full md:w-1/5 py-2 md:py-0">
+                        <span class="text-xs font-black uppercase tracking-widest text-zinc-600 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-lg">VS</span>
+                    </div>
+
+                    <div class="flex items-center gap-4 w-full md:w-2/5 justify-start">
+                        <img id="away-logo" src="" alt="Logo Visitante" class="w-12 h-12 object-contain hidden">
+                        <span id="away-name" class="text-xl font-bold tracking-tight">Cargando...</span>
+                    </div>
+
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-zinc-900 flex flex-wrap justify-between text-xs text-zinc-500 gap-2">
+                    <div>Estadio: <span id="match-venue" class="text-zinc-400 font-medium">Old Trafford</span></div>
+                    <div>Transmisión: <span class="text-zinc-400 font-medium">ESPN / Disney+</span></div>
+                </div>
+
             </div>
-        </div>
+        </section>
 
-    </section>
+        <section class="max-w-6xl mx-auto px-4 mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="md:col-span-2 relative bg-zinc-950 border border-zinc-800 rounded-xl overflow-hidden h-64 flex items-center p-6 md:p-8 shadow-xl group">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1569427382226-c2ba68731174?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-20 group-hover:scale-105 transition duration-700"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
 
-        <div class="space-y-6">
-            <h3 class="text-xl font-bold tracking-tight text-zinc-100 flex items-center gap-2">
-                <span class="w-1 h-5 bg-red-600 rounded-full"></span> The Pub
-            </h3>
+                <div class="relative z-10 max-w-md">
+                    <span class="text-[9px] font-black uppercase tracking-widest bg-red-600/10 text-red-500 border border-red-500/20 px-2 py-0.5 rounded">
+                        Columnas & Actualidad
+                    </span>
+                    <h4 class="text-xl md:text-2xl font-black text-zinc-100 tracking-tight mt-3 leading-tight">
+                        El rincón de debate para el hincha argentino
+                    </h4>
+                    <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                        Leé nuestros análisis tácticos y seguí las últimas noticias traídas directamente desde Manchester traducidas en vivo.
+                    </p>
+                    <a href="red-corner.html" class="inline-flex items-center gap-2 mt-4 bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-lg text-[11px] transition uppercase tracking-wider shadow-lg">
+                        Entrar a leer noticias →
+                    </a>
+                </div>
+            </div>
 
-            <div class="bg-gradient-to-br from-zinc-950 to-zinc-900 border border-zinc-800 rounded-xl p-6 relative overflow-hidden">
+            <div class="bg-gradient-to-br from-zinc-950 to-zinc-900 border border-zinc-800 rounded-xl p-6 relative overflow-hidden flex flex-col justify-between">
                 <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-red-600/5 rounded-full blur-2xl"></div>
                 
-                <h4 class="text-lg font-bold text-red-500">Hacia el Pub Definitivo 🍻</h4>
-                <p class="text-zinc-400 text-sm mt-3 leading-relaxed">
-                    Nuestro sueño a largo plazo es abrir un bar temático en Argentina para vivir la Premier League como si estuviéramos en Inglaterra. 
-                </p>
-                <p class="text-zinc-400 text-sm mt-2 leading-relaxed">
-                    Mientras armamos el proyecto, queremos crear la comunidad de hinchas más grande del país. ¿Te sumás a las juntadas virtuales?
-                </p>
+                <div>
+                    <h4 class="text-base font-bold text-red-500">Hacia el Pub Definitivo 🍻</h4>
+                    <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                        Nuestro sueño es abrir un bar temático en Argentina para vivir la Premier. Sumate a la comunidad mientras armamos el proyecto.
+                    </p>
+                </div>
                 
-                <div class="mt-6 space-y-3">
-                    <a href="https://discord.gg/Fadf3H9Vb" target="_blank" class="bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800 p-3 rounded-lg flex justify-between items-center text-xs transition group">
-                        <span class="text-zinc-400">Próxima Juntada:</span>
+                <div class="mt-4 space-y-2">
+                    <a href="https://discord.gg/Fadf3H9Vb" target="_blank" class="bg-zinc-900/50 hover:bg-zinc-900 border border-zinc-800 p-2.5 rounded-lg flex justify-between items-center text-[11px] transition group">
+                        <span class="text-zinc-400">Juntadas Virtuales:</span>
                         <span class="text-zinc-200 font-bold group-hover:text-red-500 transition flex items-center gap-1">Por Discord 🎧</span>
                     </a>
                     
-                    <a href="pub.html" class="block w-full text-center bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold py-2.5 rounded-lg text-xs transition border border-zinc-700">
+                    <a href="pub.html" class="block w-full text-center bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-bold py-2 rounded-lg text-[11px] transition border border-zinc-700">
                         Proponer ideas para el Bar
                     </a>
                 </div>
             </div>
-        </div>
+
+        </section>
 
     </main>
 
-    <footer class="bg-zinc-950 border-t border-zinc-900 py-8 text-center text-xs text-zinc-600">
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-6 text-center text-xs text-zinc-600 w-full">
         <p>© 2026 Old Trafford Arg. Hecho a pulmón por un Red Devil.</p>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
