@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/proximo-partido",
+      "destination": "https://api.football-data.org/v4/teams/66/matches?status=SCHEDULED&competitions=PL&limit=1"
+    }
+  ]
+}
