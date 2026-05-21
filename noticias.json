@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "El impacto de 'The Butcher': Por qué la salida limpia empieza en los pies de Licha Martínez",
+    "link": "https://www.manutd.com",
+    "imagen": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=500&auto=format&fit=crop",
+    "categoria": "Análisis de Agustín",
+    "fecha": "21 de Mayo"
+  },
+  {
+    "titulo": "Luke Shaw rompe el silencio: 'Corro como un loco cuando noto un gol'",
+    "link": "https://www.manutd.com",
+    "imagen": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=500&auto=format&fit=crop",
+    "categoria": "Entrevista",
+    "fecha": "20 de Mayo"
+  },
+  {
+    "titulo": "Rumbo al Amex Stadium: Las claves del United para cerrar la Premier ante Brighton",
+    "link": "https://www.manutd.com",
+    "imagen": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=500&auto=format&fit=crop",
+    "categoria": "Actualidad",
+    "fecha": "19 de Mayo"
+  }
+]
